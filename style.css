@@ -1,0 +1,94 @@
+body{
+    background-color: aqua;
+    overflow: hidden;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.gamecontainer{
+    background-image: url(bg4.png);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.gameOver{
+    color: white;
+    position: relative;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-left: 37%;
+    width: 29%;
+    text-align: center;
+}
+.score{
+    color: black;
+    position: absolute;
+    border: 3px solid black;
+    padding: 1px 20px;
+    background-color: #e0aa6b;
+    border-radius: 9px;
+    font-size: 18px;
+    right: 29px;
+    top: 10px;
+}
+.runner{
+    background-image: url(mari.png);
+    width: 9vw;
+    height: 20vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 10vw 20vh;
+    bottom: 41px;
+    left: 18vw;
+}
+
+.stone{
+    background-image: url(stone.png);
+    width: 9vw;
+    height: 15vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 9vw 15vh;
+    left: 43vw;
+    bottom: 5vh;
+}
+
+
+.animateRunner{
+    animation: runnerJump 0.6s linear;
+}
+
+.animateStone{
+    animation: moveStone 5s linear infinite;
+}
+
+
+/* animations */
+
+/* jump animation */
+@keyframes runnerJump{
+    0%{
+        bottom: 41px;
+    }
+    50%{
+        bottom: 250px;
+    }   
+    100%{
+        bottom: 41px;
+    }
+}
+
+/* stone moving annimation */
+@keyframes moveStone{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: 0vw;
+    }
+}
